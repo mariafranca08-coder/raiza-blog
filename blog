@@ -1,769 +1,862 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tecnologia no Mar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <meta name="description"
+        content="Tecnologia no Mar — descubra como a tecnologia ajuda na exploração, preservação e sustentabilidade dos oceanos.">
 
-html {
-    scroll-behavior: smooth;
-}
+    <title>Tecnologia no Mar</title>
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4faff;
-    color: #102a43;
-    line-height: 1.6;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* CABEÇALHO */
-.hero {
-    min-height: 570px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 20px;
-    color: white;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    background:
-        linear-gradient(
-            rgba(0, 31, 63, 0.78),
-            rgba(0, 119, 182, 0.65)
-        ),
-        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85");
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4faff;
+            color: #102a43;
+            line-height: 1.6;
+        }
 
-    background-size: cover;
-    background-position: center;
-}
+        /* HERO */
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
 
-.hero-content {
-    max-width: 850px;
-}
+            background:
+                linear-gradient(
+                    rgba(0, 31, 63, 0.78),
+                    rgba(0, 119, 182, 0.68)
+                ),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85");
 
-.hero-icon {
-    font-size: 55px;
-    display: block;
-    margin-bottom: 10px;
-}
+            background-size: cover;
+            background-position: center;
+        }
 
-.hero h1 {
-    font-size: clamp(42px, 8vw, 80px);
-    line-height: 1.1;
-    margin-bottom: 25px;
-    font-weight: 800;
-}
+        .hero-content {
+            max-width: 850px;
+        }
 
-.hero p {
-    max-width: 700px;
-    margin: 0 auto 35px;
-    font-size: 19px;
-    color: #e5f6ff;
-}
+        .hero-icon {
+            font-size: 55px;
+            display: block;
+            margin-bottom: 10px;
+        }
 
-.hero-button {
-    display: inline-block;
-    padding: 14px 28px;
-    border-radius: 30px;
-    background: white;
-    color: #006494;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 80px);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
 
-.hero-button:hover {
-    transform: translateY(-4px);
-    background: #dff6ff;
-}
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            font-size: 19px;
+            color: #e5f6ff;
+        }
 
-/* INTRODUÇÃO */
-.intro {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 90px 25px 60px;
-    text-align: center;
-}
+        .hero-button {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 30px;
+            background: white;
+            color: #006494;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.section-label {
-    display: inline-block;
-    margin-bottom: 15px;
-    color: #0077b6;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
+        .hero-button:hover {
+            transform: translateY(-4px);
+            background: #dff6ff;
+        }
 
-.intro h2,
-.section-title h2 {
-    color: #023e5a;
-    font-size: clamp(28px, 5vw, 42px);
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
+        /* INTRODUÇÃO */
+        .intro {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 90px 25px 60px;
+            text-align: center;
+        }
 
-.intro p {
-    color: #52697d;
-    font-size: 17px;
-}
+        .section-label {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #0077b6;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
 
-/* POSTS */
-.posts-section {
-    max-width: 1250px;
-    margin: auto;
-    padding: 40px 25px 100px;
-}
+        .intro h2,
+        .section-title h2 {
+            color: #023e5a;
+            font-size: clamp(28px, 5vw, 42px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
+        .intro p {
+            color: #52697d;
+            font-size: 17px;
+        }
 
-.posts-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
+        /* POSTS */
+        .posts-section {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 40px 25px 100px;
+        }
 
-/* CARDS */
-.post-card {
-    background: white;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 70, 110, 0.10);
-    border: 1px solid #e4f2f9;
-    transition: 0.3s;
-}
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-.post-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 45px rgba(0, 100, 160, 0.18);
-}
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
 
-/* IMAGENS */
-.post-image-container {
-    height: 270px;
-    position: relative;
-    overflow: hidden;
-}
+        /* CARD */
+        .post-card {
+            background: white;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 70, 110, 0.10);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e4f2f9;
+        }
 
-.post-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: 0.5s;
-}
+        .post-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(0, 100, 160, 0.18);
+        }
 
-.post-card:hover .post-image {
-    transform: scale(1.06);
-}
+        /* IMAGEM */
+        .post-image-container {
+            height: 270px;
+            position: relative;
+            overflow: hidden;
+            background: #dff4fc;
+        }
 
-.post-number {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 48px;
-    height: 48px;
+        .post-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        .post-card:hover .post-image {
+            transform: scale(1.06);
+        }
 
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.92);
-    color: #0077b6;
-    font-weight: bold;
-}
+        .post-number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.92);
+            color: #0077b6;
+            font-weight: bold;
+        }
 
-/* CONTEÚDO */
-.post-content {
-    padding: 30px;
-}
+        /* CONTEÚDO */
+        .post-content {
+            padding: 30px;
+        }
 
-.post-category {
-    color: #0096c7;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
+        .post-category {
+            color: #0096c7;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
 
-.post-content h3 {
-    margin: 10px 0 15px;
-    color: #023e5a;
-    font-size: 27px;
-    line-height: 1.2;
-}
+        .post-content h3 {
+            margin: 10px 0 15px;
+            color: #023e5a;
+            font-size: 27px;
+            line-height: 1.2;
+        }
 
-.post-content p {
-    color: #5b7083;
-    font-size: 15px;
-    margin-bottom: 25px;
-}
+        .post-content p {
+            color: #5b7083;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
 
-/* LIKE E DISLIKE */
-.post-footer {
-    border-top: 1px solid #e7f0f5;
-    padding-top: 20px;
+        /* AVALIAÇÃO */
+        .post-footer {
+            border-top: 1px solid #e7f0f5;
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-}
+        .rating {
+            display: flex;
+            gap: 10px;
+        }
 
-.rating {
-    display: flex;
-    gap: 10px;
-}
+        .rating-button {
+            border: none;
+            cursor: pointer;
+            padding: 9px 13px;
+            border-radius: 12px;
+            background: #f0f8fc;
+            color: #34566c;
+            font-size: 15px;
+            transition: 0.2s;
+        }
 
-.rating-button {
-    border: none;
-    cursor: pointer;
+        .rating-button:hover {
+            transform: translateY(-2px);
+            background: #dff4fc;
+        }
 
-    padding: 9px 13px;
-    border-radius: 12px;
+        .rating-button.active {
+            background: #0077b6;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 119, 182, 0.25);
+        }
 
-    background: #f0f8fc;
-    color: #34566c;
+        .dislike-button.active {
+            background: #e63946;
+            color: white;
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.25);
+        }
 
-    font-size: 15px;
+        .rating-message {
+            color: #8296a5;
+            font-size: 12px;
+        }
 
-    transition: 0.2s;
-}
+        /* RODAPÉ */
+        .footer {
+            text-align: center;
+            padding: 55px 20px;
+            background: #023e5a;
+            color: white;
+        }
 
-.rating-button:hover {
-    transform: translateY(-2px);
-    background: #dff4fc;
-}
+        .footer-wave {
+            color: #48cae4;
+            font-size: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
 
-.rating-button.active {
-    background: #0077b6;
-    color: white;
-}
+        .footer h2 {
+            margin-bottom: 10px;
+        }
 
-.dislike-button.active {
-    background: #e63946;
-    color: white;
-}
+        .footer p {
+            color: #c8e8f5;
+        }
 
-.rating-message {
-    color: #8296a5;
-    font-size: 12px;
-}
+        .copyright {
+            margin-top: 25px;
+            font-size: 13px;
+        }
 
-/* RODAPÉ */
-.footer {
-    text-align: center;
-    padding: 55px 20px;
-    background: #023e5a;
-    color: white;
-}
+        /* TABLET */
+        @media (max-width: 850px) {
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
 
-.footer-wave {
-    color: #48cae4;
-    font-size: 20px;
-    margin-bottom: 20px;
-    letter-spacing: 5px;
-}
+            .hero {
+                min-height: 500px;
+            }
 
-.footer h2 {
-    margin-bottom: 10px;
-}
+            .post-image-container {
+                height: 300px;
+            }
+        }
 
-.footer p {
-    color: #c8e8f5;
-}
+        /* CELULAR */
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 520px;
+                padding: 60px 20px;
+            }
 
-.copyright {
-    margin-top: 25px;
-    font-size: 13px;
-}
+            .hero h1 {
+                font-size: 45px;
+            }
 
-/* TABLET */
-@media (max-width: 850px) {
-    .posts-grid {
-        grid-template-columns: 1fr;
-    }
+            .hero p {
+                font-size: 16px;
+            }
 
-    .hero {
-        min-height: 500px;
-    }
+            .intro {
+                padding-top: 65px;
+            }
 
-    .post-image-container {
-        height: 300px;
-    }
-}
+            .posts-section {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
 
-/* CELULAR */
-@media (max-width: 600px) {
-    .hero {
-        min-height: 520px;
-        padding: 60px 20px;
-    }
+            .post-image-container {
+                height: 220px;
+            }
 
-    .hero h1 {
-        font-size: 45px;
-    }
+            .post-content {
+                padding: 22px;
+            }
 
-    .hero p {
-        font-size: 16px;
-    }
+            .post-content h3 {
+                font-size: 24px;
+            }
 
-    .intro {
-        padding-top: 65px;
-    }
+            .post-footer {
+                align-items: flex-start;
+                flex-direction: column;
+            }
 
-    .posts-section {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+            .rating-message {
+                display: none;
+            }
 
-    .post-image-container {
-        height: 220px;
-    }
-
-    .post-content {
-        padding: 22px;
-    }
-
-    .post-content h3 {
-        font-size: 24px;
-    }
-
-    .post-footer {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .rating-message {
-        display: none;
-    }
-}
-</style>
+            .rating-button {
+                padding: 10px 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="hero">
-    <div class="hero-content">
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
 
-        <span class="hero-icon">🌊</span>
+            <span class="hero-icon">🌊</span>
 
-        <h1>Tecnologia no Mar</h1>
+            <h1>Tecnologia no Mar</h1>
 
-        <p>
-            Descubra como a tecnologia está transformando a exploração,
-            a pesquisa, a preservação e a sustentabilidade dos oceanos.
-        </p>
+            <p>
+                Descubra como a tecnologia está transformando a exploração,
+                a pesquisa, a preservação e a sustentabilidade dos oceanos.
+            </p>
 
-        <a href="#posts" class="hero-button">
-            Explorar tecnologias
-        </a>
+            <a href="#posts" class="hero-button">
+                Explorar tecnologias
+            </a>
 
-    </div>
-</header>
+        </div>
+    </header>
 
-<main>
+    <main>
 
-<section class="intro">
+        <!-- INTRODUÇÃO -->
+        <section class="intro">
 
-    <span class="section-label">
-        INOVAÇÃO E OCEANOS
-    </span>
+            <span class="section-label">
+                INOVAÇÃO E OCEANOS
+            </span>
 
-    <h2>
-        O futuro da tecnologia está conectado ao mar
-    </h2>
+            <h2>
+                O futuro da tecnologia está conectado ao mar
+            </h2>
 
-    <p>
-        Os oceanos cobrem grande parte do nosso planeta e ainda possuem
-        muitos mistérios. Com o avanço da tecnologia, cientistas e
-        pesquisadores conseguem explorar regiões profundas, estudar a
-        vida marinha, monitorar mudanças ambientais e buscar novas
-        formas de energia sustentável.
-    </p>
+            <p>
+                Os oceanos cobrem grande parte do nosso planeta e ainda possuem
+                muitos mistérios. Com o avanço da tecnologia, cientistas e
+                pesquisadores conseguem explorar regiões profundas, estudar a
+                vida marinha, monitorar mudanças ambientais e buscar novas
+                formas de energia sustentável.
+            </p>
 
-</section>
+        </section>
 
-<section class="posts-section" id="posts">
+        <!-- POSTS -->
+        <section class="posts-section" id="posts">
 
-    <div class="section-title">
+            <div class="section-title">
 
-        <span class="section-label">
-            CONHEÇA
-        </span>
+                <span class="section-label">
+                    CONHEÇA
+                </span>
+
+                <h2>
+                    Tecnologias que transformam os oceanos
+                </h2>
+
+            </div>
+
+            <div class="posts-grid">
+
+                <!-- POST 1 -->
+                <article class="post-card" data-post-id="post1">
+
+                    <div class="post-image-container">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&w=900&q=80"
+                            alt="Tecnologia e exploração submarina"
+                            class="post-image"
+                        >
+
+                        <span class="post-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <div class="post-content">
+
+                        <span class="post-category">
+                            EXPLORAÇÃO SUBMARINA
+                        </span>
+
+                        <h3>
+                            Robôs Submarinos
+                        </h3>
+
+                        <p>
+                            Robôs submarinos, como os ROVs e AUVs, ajudam
+                            pesquisadores a explorar regiões profundas do
+                            oceano que seriam difíceis ou perigosas para os
+                            seres humanos. Eles podem realizar pesquisas,
+                            registrar imagens e coletar informações sobre
+                            o fundo do mar e a vida marinha.
+                        </p>
+
+                        <div class="post-footer">
+
+                            <div class="rating">
+
+                                <button class="rating-button like-button">
+                                    👍 <span class="like-count">0</span>
+                                </button>
+
+                                <button class="rating-button dislike-button">
+                                    👎 <span class="dislike-count">0</span>
+                                </button>
+
+                            </div>
+
+                            <span class="rating-message">
+                                Sua avaliação
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POST 2 -->
+                <article class="post-card" data-post-id="post2">
+
+                    <div class="post-image-container">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80"
+                            alt="Vida marinha e tecnologia"
+                            class="post-image"
+                        >
+
+                        <span class="post-number">
+                            02
+                        </span>
+
+                    </div>
+
+                    <div class="post-content">
+
+                        <span class="post-category">
+                            INTELIGÊNCIA ARTIFICIAL
+                        </span>
+
+                        <h3>
+                            Inteligência Artificial nos Oceanos
+                        </h3>
+
+                        <p>
+                            A inteligência artificial permite analisar grandes
+                            quantidades de dados marítimos em pouco tempo.
+                            Com ela, pesquisadores podem identificar espécies,
+                            acompanhar animais marinhos e detectar mudanças
+                            no ambiente, ajudando na preservação dos oceanos.
+                        </p>
+
+                        <div class="post-footer">
+
+                            <div class="rating">
+
+                                <button class="rating-button like-button">
+                                    👍 <span class="like-count">0</span>
+                                </button>
+
+                                <button class="rating-button dislike-button">
+                                    👎 <span class="dislike-count">0</span>
+                                </button>
+
+                            </div>
+
+                            <span class="rating-message">
+                                Sua avaliação
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POST 3 -->
+                <article class="post-card" data-post-id="post3">
+
+                    <div class="post-image-container">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=900&q=80"
+                            alt="Ondas do oceano representando energia renovável"
+                            class="post-image"
+                        >
+
+                        <span class="post-number">
+                            03
+                        </span>
+
+                    </div>
+
+                    <div class="post-content">
+
+                        <span class="post-category">
+                            ENERGIA RENOVÁVEL
+                        </span>
+
+                        <h3>
+                            Energia das Ondas e Marés
+                        </h3>
+
+                        <p>
+                            O movimento constante das ondas e das marés pode
+                            ser aproveitado para produzir energia renovável.
+                            Essa tecnologia utiliza a força natural dos oceanos
+                            para gerar eletricidade e pode contribuir para a
+                            construção de um futuro mais sustentável.
+                        </p>
+
+                        <div class="post-footer">
+
+                            <div class="rating">
+
+                                <button class="rating-button like-button">
+                                    👍 <span class="like-count">0</span>
+                                </button>
+
+                                <button class="rating-button dislike-button">
+                                    👎 <span class="dislike-count">0</span>
+                                </button>
+
+                            </div>
+
+                            <span class="rating-message">
+                                Sua avaliação
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POST 4 -->
+                <article class="post-card" data-post-id="post4">
+
+                    <div class="post-image-container">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=900&q=80"
+                            alt="Monitoramento dos oceanos"
+                            class="post-image"
+                        >
+
+                        <span class="post-number">
+                            04
+                        </span>
+
+                    </div>
+
+                    <div class="post-content">
+
+                        <span class="post-category">
+                            MONITORAMENTO
+                        </span>
+
+                        <h3>
+                            Satélites e Monitoramento dos Oceanos
+                        </h3>
+
+                        <p>
+                            Satélites ajudam cientistas a observar grandes
+                            áreas dos oceanos de forma rápida e contínua.
+                            Eles podem acompanhar a temperatura da água,
+                            o nível do mar e outros fenômenos, contribuindo
+                            para o estudo das mudanças climáticas.
+                        </p>
+
+                        <div class="post-footer">
+
+                            <div class="rating">
+
+                                <button class="rating-button like-button">
+                                    👍 <span class="like-count">0</span>
+                                </button>
+
+                                <button class="rating-button dislike-button">
+                                    👎 <span class="dislike-count">0</span>
+                                </button>
+
+                            </div>
+
+                            <span class="rating-message">
+                                Sua avaliação
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <div class="footer-wave">
+            ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+        </div>
 
         <h2>
-            Tecnologias que transformam os oceanos
+            🌊 Tecnologia no Mar
         </h2>
 
-    </div>
+        <p>
+            Conhecimento e inovação para um futuro mais sustentável.
+        </p>
 
-    <div class="posts-grid">
+        <p class="copyright">
+            © 2026 Tecnologia no Mar. Projeto educacional.
+        </p>
 
-        <!-- POST 1 -->
-        <article class="post-card" data-post-id="post1">
+    </footer>
 
-            <div class="post-image-container">
 
-                <img
-                    class="post-image"
-                    src="https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&w=900&q=80"
-                    alt="Tecnologia e exploração submarina"
-                >
+    <script>
 
-                <span class="post-number">01</span>
+        const posts = document.querySelectorAll(".post-card");
 
-            </div>
+        posts.forEach((post) => {
 
-            <div class="post-content">
+            const postId = post.dataset.postId;
 
-                <span class="post-category">
-                    EXPLORAÇÃO SUBMARINA
-                </span>
+            const likeButton =
+                post.querySelector(".like-button");
 
-                <h3>
-                    Robôs Submarinos
-                </h3>
+            const dislikeButton =
+                post.querySelector(".dislike-button");
 
-                <p>
-                    Robôs submarinos, como os ROVs e AUVs, ajudam
-                    pesquisadores a explorar regiões profundas do oceano
-                    que seriam difíceis ou perigosas para os seres humanos.
-                    Eles podem realizar pesquisas, registrar imagens e
-                    coletar informações sobre o fundo do mar e a vida marinha.
-                </p>
+            const likeCount =
+                post.querySelector(".like-count");
 
-                <div class="post-footer">
+            const dislikeCount =
+                post.querySelector(".dislike-count");
 
-                    <div class="rating">
 
-                        <button class="rating-button like-button">
-                            👍 <span class="like-count">0</span>
-                        </button>
+            const likesKey =
+                "tecnologiaNoMar_" + postId + "_likes";
 
-                        <button class="rating-button dislike-button">
-                            👎 <span class="dislike-count">0</span>
-                        </button>
+            const dislikesKey =
+                "tecnologiaNoMar_" + postId + "_dislikes";
 
-                    </div>
+            const userVoteKey =
+                "tecnologiaNoMar_" + postId + "_userVote";
 
-                    <span class="rating-message">
-                        Sua avaliação
-                    </span>
 
-                </div>
+            let likes =
+                Number(localStorage.getItem(likesKey)) || 0;
 
-            </div>
-        </article>
+            let dislikes =
+                Number(localStorage.getItem(dislikesKey)) || 0;
 
+            let userVote =
+                localStorage.getItem(userVoteKey);
 
-        <!-- POST 2 -->
-        <article class="post-card" data-post-id="post2">
 
-            <div class="post-image-container">
+            function updateCounters() {
 
-                <img
-                    class="post-image"
-                    src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80"
-                    alt="Vida marinha e tecnologia"
-                >
+                likeCount.textContent = likes;
 
-                <span class="post-number">02</span>
+                dislikeCount.textContent = dislikes;
 
-            </div>
-
-            <div class="post-content">
-
-                <span class="post-category">
-                    INTELIGÊNCIA ARTIFICIAL
-                </span>
-
-                <h3>
-                    Inteligência Artificial nos Oceanos
-                </h3>
-
-                <p>
-                    A inteligência artificial permite analisar grandes
-                    quantidades de dados marítimos em pouco tempo.
-                    Com ela, pesquisadores podem identificar espécies,
-                    acompanhar animais marinhos e detectar mudanças
-                    no ambiente, ajudando na preservação dos oceanos.
-                </p>
-
-                <div class="post-footer">
-
-                    <div class="rating">
-
-                        <button class="rating-button like-button">
-                            👍 <span class="like-count">0</span>
-                        </button>
-
-                        <button class="rating-button dislike-button">
-                            👎 <span class="dislike-count">0</span>
-                        </button>
-
-                    </div>
-
-                    <span class="rating-message">
-                        Sua avaliação
-                    </span>
-
-                </div>
-
-            </div>
-        </article>
-
-
-        <!-- POST 3 -->
-        <article class="post-card" data-post-id="post3">
-
-            <div class="post-image-container">
-
-                <img
-                    class="post-image"
-                    src="https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=900&q=80"
-                    alt="Energia das ondas"
-                >
-
-                <span class="post-number">03</span>
-
-            </div>
-
-            <div class="post-content">
-
-                <span class="post-category">
-                    ENERGIA RENOVÁVEL
-                </span>
-
-                <h3>
-                    Energia das Ondas e Marés
-                </h3>
-
-                <p>
-                    O movimento constante das ondas e das marés pode
-                    ser aproveitado para produzir energia renovável.
-                    Essa tecnologia utiliza a força natural dos oceanos
-                    para gerar eletricidade e contribuir para um futuro
-                    mais sustentável.
-                </p>
-
-                <div class="post-footer">
-
-                    <div class="rating">
-
-                        <button class="rating-button like-button">
-                            👍 <span class="like-count">0</span>
-                        </button>
-
-                        <button class="rating-button dislike-button">
-                            👎 <span class="dislike-count">0</span>
-                        </button>
-
-                    </div>
-
-                    <span class="rating-message">
-                        Sua avaliação
-                    </span>
-
-                </div>
-
-            </div>
-        </article>
-
-
-        <!-- POST 4 -->
-        <article class="post-card" data-post-id="post4">
-
-            <div class="post-image-container">
-
-                <img
-                    class="post-image"
-                    src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=900&q=80"
-                    alt="Monitoramento dos oceanos"
-                >
-
-                <span class="post-number">04</span>
-
-            </div>
-
-            <div class="post-content">
-
-                <span class="post-category">
-                    MONITORAMENTO
-                </span>
-
-                <h3>
-                    Satélites e Monitoramento dos Oceanos
-                </h3>
-
-                <p>
-                    Satélites ajudam cientistas a observar grandes
-                    áreas dos oceanos de forma rápida e contínua.
-                    Eles podem acompanhar a temperatura da água,
-                    o nível do mar e outros fenômenos, contribuindo
-                    para o estudo das mudanças climáticas.
-                </p>
-
-                <div class="post-footer">
-
-                    <div class="rating">
-
-                        <button class="rating-button like-button">
-                            👍 <span class="like-count">0</span>
-                        </button>
-
-                        <button class="rating-button dislike-button">
-                            👎 <span class="dislike-count">0</span>
-                        </button>
-
-                    </div>
-
-                    <span class="rating-message">
-                        Sua avaliação
-                    </span>
-
-                </div>
-
-            </div>
-        </article>
-
-    </div>
-</section>
-
-</main>
-
-<footer class="footer">
-
-    <div class="footer-wave">
-        ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-    </div>
-
-    <h2>🌊 Tecnologia no Mar</h2>
-
-    <p>
-        Conhecimento e inovação para um futuro mais sustentável.
-    </p>
-
-    <p class="copyright">
-        © 2026 Tecnologia no Mar. Projeto educacional.
-    </p>
-
-</footer>
-
-<script>
-/* SISTEMA DE LIKE E DISLIKE */
-
-const posts = document.querySelectorAll(".post-card");
-
-posts.forEach((post) => {
-
-    const postId = post.dataset.postId;
-
-    const likeButton = post.querySelector(".like-button");
-    const dislikeButton = post.querySelector(".dislike-button");
-
-    const likeCount = post.querySelector(".like-count");
-    const dislikeCount = post.querySelector(".dislike-count");
-
-    const likesKey = "tecnologiaNoMar_" + postId + "_likes";
-    const dislikesKey = "tecnologiaNoMar_" + postId + "_dislikes";
-    const userVoteKey = "tecnologiaNoMar_" + postId + "_userVote";
-
-    let likes = Number(localStorage.getItem(likesKey)) || 0;
-    let dislikes = Number(localStorage.getItem(dislikesKey)) || 0;
-    let userVote = localStorage.getItem(userVoteKey);
-
-    function updateCounters() {
-        likeCount.textContent = likes;
-        dislikeCount.textContent = dislikes;
-    }
-
-    function updateActiveButton() {
-
-        likeButton.classList.remove("active");
-        dislikeButton.classList.remove("active");
-
-        if (userVote === "like") {
-            likeButton.classList.add("active");
-        }
-
-        if (userVote === "dislike") {
-            dislikeButton.classList.add("active");
-        }
-    }
-
-    function saveData() {
-
-        localStorage.setItem(likesKey, likes);
-        localStorage.setItem(dislikesKey, dislikes);
-
-        if (userVote) {
-            localStorage.setItem(userVoteKey, userVote);
-        } else {
-            localStorage.removeItem(userVoteKey);
-        }
-    }
-
-    likeButton.addEventListener("click", function() {
-
-        if (userVote === "like") {
-
-            likes--;
-            userVote = null;
-
-        } else {
-
-            if (userVote === "dislike") {
-                dislikes--;
             }
 
-            likes++;
-            userVote = "like";
-        }
 
-        saveData();
-        updateCounters();
-        updateActiveButton();
-    });
+            function updateActiveButton() {
 
-    dislikeButton.addEventListener("click", function() {
+                likeButton.classList.remove("active");
 
-        if (userVote === "dislike") {
+                dislikeButton.classList.remove("active");
 
-            dislikes--;
-            userVote = null;
 
-        } else {
+                if (userVote === "like") {
 
-            if (userVote === "like") {
-                likes--;
+                    likeButton.classList.add("active");
+
+                }
+
+                if (userVote === "dislike") {
+
+                    dislikeButton.classList.add("active");
+
+                }
+
             }
 
-            dislikes++;
-            userVote = "dislike";
-        }
 
-        saveData();
-        updateCounters();
-        updateActiveButton();
-    });
+            function saveData() {
 
-    updateCounters();
-    updateActiveButton();
+                localStorage.setItem(
+                    likesKey,
+                    likes
+                );
 
-});
-</script>
+                localStorage.setItem(
+                    dislikesKey,
+                    dislikes
+                );
+
+
+                if (userVote) {
+
+                    localStorage.setItem(
+                        userVoteKey,
+                        userVote
+                    );
+
+                } else {
+
+                    localStorage.removeItem(
+                        userVoteKey
+                    );
+
+                }
+
+            }
+
+
+            likeButton.addEventListener("click", () => {
+
+                if (userVote === "like") {
+
+                    likes--;
+
+                    userVote = null;
+
+                } else {
+
+                    if (userVote === "dislike") {
+
+                        dislikes--;
+
+                    }
+
+                    likes++;
+
+                    userVote = "like";
+
+                }
+
+                saveData();
+
+                updateCounters();
+
+                updateActiveButton();
+
+            });
+
+
+            dislikeButton.addEventListener("click", () => {
+
+                if (userVote === "dislike") {
+
+                    dislikes--;
+
+                    userVote = null;
+
+                } else {
+
+                    if (userVote === "like") {
+
+                        likes--;
+
+                    }
+
+                    dislikes++;
+
+                    userVote = "dislike";
+
+                }
+
+                saveData();
+
+                updateCounters();
+
+                updateActiveButton();
+
+            });
+
+
+            updateCounters();
+
+            updateActiveButton();
+
+        });
+
+    </script>
 
 </body>
 </html>
-```
